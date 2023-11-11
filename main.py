@@ -1,7 +1,7 @@
 import pygame
 from random import choice, randint, uniform
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
-from particles import Particle, ExplodingParticle
+from particles import Particle, ExplodingParticle, FloatingParticle
 
 display_surface = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 clock = pygame.time.Clock()
@@ -38,7 +38,7 @@ def spawn_floating_particle():
     color = "white"
     direction = pygame.math.Vector2(0, -1)
     speed = randint(50, 100)
-    Particle(particle_group, pos, color, direction, speed)
+    FloatingParticle(particle_group, pos, color, direction, speed)
 
 
 def main_loop():
